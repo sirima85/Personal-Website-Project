@@ -28,10 +28,10 @@ function game() {
     if (positionY > tc - 1) {
         positionY = 0;
     }
-    ctx.fillStyle = "navy";	
+    ctx.fillStyle = "Navy";	
     ctx.fillRect(0, 0, canv.width, canv.height); 
 
-    ctx.fillStyle = "white";	
+    ctx.fillStyle = "White";	
     for (var i = 0; i < trail.length; i++) {
         ctx.fillRect(trail[i].x * gs, trail[i].y * gs, gs - 2, gs - 2);
         if (trail[i].x == positionX && trail[i].y == positionY) {
@@ -48,7 +48,7 @@ function game() {
 
     if (cherryX == positionX && cherryY == positionY) {	
         tail++;	
-        document.getElementById("score").innerHTML = ++score; 
+        document.getElementById("score").innerHTML = ++score;  
         cherryX = Math.floor(Math.random() * tc); 
         cherryY = Math.floor(Math.random() * tc); 
     }
